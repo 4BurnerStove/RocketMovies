@@ -1,12 +1,12 @@
-import { Container, Profile, Logout } from './styles'
+import { Container, Profile } from './styles'
+import { Input } from '../Input'
 
-export function Header(){
-  return(
+
+export function Header() {
+  return (
     <Container>
-      <Profile >
+      <Profile>
 
-
-        <img src="" alt="" />
       </Profile>
 
     </Container>
