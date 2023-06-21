@@ -31,7 +31,7 @@ export default createGlobalStyle`
   }
 
   body {
-    background-color: ${({ theme }) => theme.COLORS.BACKGROUND_100 };
+    background-color: ${({ theme }) => theme.COLORS.ROSE_BACKGROUND };
     color: ${({ theme }) => theme.COLORS.WHITE };
 
     -webkit-font-smoothing: antialiased;  
