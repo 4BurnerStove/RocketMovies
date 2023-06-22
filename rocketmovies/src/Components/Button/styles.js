@@ -11,6 +11,7 @@ export const Container = styled.button`
   
   font-weight: 500;
   background-color: ${({ theme }) => theme.COLORS.ROSE};
+  /* Caso haja um icon --------------- */
   display: flex;
   align-items: center;
   justify-content: center;
