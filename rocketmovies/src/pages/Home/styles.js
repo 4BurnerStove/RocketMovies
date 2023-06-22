@@ -8,6 +8,18 @@ export const Container = styled.div`
   grid-template-rows: 10.5rem auto;
   grid-template-areas: 
   "header"
-  "content"
-  ;
+  "content";
+`
+
+export const Content = styled.div`
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  padding-top: 4.7rem;
+  justify-content: space-around;
+
+
+  > button { 
+    width: 20.7rem;
+  }
 `
