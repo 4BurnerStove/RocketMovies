@@ -3,7 +3,7 @@ export default {
     BACKGROUND_100: "#1C1B1E",
     BACKGROUND_200: "#262529",
     BACKGROUND_300: "#312E38",
-    ROSE_BACKGROUND: 'rgba(349,100, 76, 0.24)',
+    ROSE_BACKGROUND: 'rgba(255,133, 155, 5%)',
 
     WHITE: "#F4EDE8",
     ROSE: "#FF859B",

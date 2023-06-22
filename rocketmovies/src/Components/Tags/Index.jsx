@@ -1,6 +1,6 @@
 import { Container } from './styled'
 
-export function Tags({ name }){
+export function Tag({ name }){
   return (
     <Container>
       {name}
