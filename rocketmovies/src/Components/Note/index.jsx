@@ -1,10 +1,14 @@
 import { Container } from './styles'
 import { Tag } from '../Tags'
+import { Rating } from '../Rating'
 
 export function Note({ data, ...rest }) {
   return (
     <Container {...rest}>
-      <h1>{data.title}</h1>
+      <div>
+        <h1>{data.title}</h1>
+        <Rating rating={3} ></Rating>
+      </div>
       {
         data.tags &&
         <footer>

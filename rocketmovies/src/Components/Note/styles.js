@@ -10,13 +10,23 @@ border-radius: 1rem;
 padding: 2.2rem;
 margin-bottom: 1.6rem;
 
-> h1 {
-  flex: 1;
-  text-align: left;
-  font-weight: 700;
-  font-size: 2.4rem;
-  color: ${({ theme }) => theme.COLORS.WHITE};
+> div {
+  display: flex;
+  flex-direction: column;
+
+
+   h1 {
+    flex: 1;
+    text-align: left;
+    font-weight: 700;
+    font-size: 2.4rem;
+    color: ${({ theme }) => theme.COLORS.WHITE};
+  }
+
+   svg {
+  }
 }
+
 
 > footer {
   width: 100%;

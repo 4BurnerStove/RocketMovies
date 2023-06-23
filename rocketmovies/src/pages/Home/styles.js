@@ -21,7 +21,7 @@ export const Content = styled.div`
     width: 100%;
     height: 5rem;
     display: flex;
-    margin-top: ;
+    margin-block: 4.8rem;
     justify-content: space-between;
 
      button { 
