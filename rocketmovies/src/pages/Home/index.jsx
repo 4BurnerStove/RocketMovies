@@ -23,7 +23,6 @@ export function Home() {
               {id:'1', name:'Drama'},
               {id:'2', name:'Ficção cientifica'}
             ]
-
           }}
         ></Note>
 

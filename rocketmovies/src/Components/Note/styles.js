@@ -7,13 +7,22 @@ background-color: ${({theme }) => theme.COLORS.ROSE_BACKGROUND};
 border: none;
 border-radius: 1rem;
 
-padding: 2.2rem;
+padding: 3.2rem;
 margin-bottom: 1.6rem;
+
+
+p {
+  margin-top: 1.5rem;
+  color: ${({ theme }) => theme.COLORS.GRAY_100};
+  font-size: 1.6rem;
+  font-weight: 300;
+  text-align: left;
+}
+
 
 > div {
   display: flex;
   flex-direction: column;
-
 
    h1 {
     flex: 1;
@@ -23,8 +32,6 @@ margin-bottom: 1.6rem;
     color: ${({ theme }) => theme.COLORS.WHITE};
   }
 
-   svg {
-  }
 }
 
 
