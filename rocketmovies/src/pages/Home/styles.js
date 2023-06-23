@@ -12,14 +12,21 @@ export const Container = styled.div`
 `
 
 export const Content = styled.div`
-  width: 100%;
+  width: 114rem;
   margin: 0 auto;
   display: flex;
-  padding-top: 4.7rem;
-  justify-content: space-around;
+  flex-direction: column;
 
+  > header {
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    margin-top: ;
+    justify-content: space-between;
 
-  > button { 
+     button { 
     width: 20.7rem;
   }
+ }
+
 `

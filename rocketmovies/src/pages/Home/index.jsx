@@ -5,43 +5,28 @@ import { Note } from '../../Components/Note'
 
 import { FiPlus } from 'react-icons/fi'
 
-export function Home() {<Note
-          data={{
-            title: 'Interestelar',
-            tags: [
-              {
-                id: '1', name: 'Aventura'
-              },
-              {
-                id: '2', name: 'Magical'
-              }
-            ]
-          }}
-        >
-        </Note>
-  return (
+export function Home() {
+ return (
     <Container>
       <Header></Header>
       <Content>
-        
+        <header>
         <h1>Meus filmes</h1>
         <Button icon={FiPlus} name='Adicionar Filme'>
         </Button>
-
+        </header>
+        
         <Note
-          data={{
+          data ={{
             title: 'Interestelar',
             tags: [
-              {
-                id: '1', name: 'Aventura'
-              },
-              {
-                id: '2', name: 'Magical'
-              }
+              {id:'1', name:'Drama'},
+              {id:'2', name:'Ficção cientifica'}
             ]
+
           }}
-        >
-        </Note>
+        ></Note>
+
       </Content>
 
     </Container>
