@@ -7,7 +7,7 @@ export function Note({ data, ...rest }) {
     <Container {...rest}>
       <div>
         <h1>{data.title}</h1>
-        <Rating rating={3} ></Rating>
+        <Rating rating={1} ></Rating>
       </div>
 
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur dolorem porro ducimus sint doloremque quisquam numquam, earum reprehenderit vitae, eos saepe rem iure voluptates ipsum nesciunt! Ab ea illo consectetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim repudiandae, praesentium quisquam fugiat totam, assumenda quos harum neque pariatur exercitationem laborum nulla. Harum omnis sequi illo quaerat eum, suscipit voluptas!</p>

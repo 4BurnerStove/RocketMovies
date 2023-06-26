@@ -9,24 +9,34 @@ export const Container = styled.div`
   grid-template-areas: 
   "header"
   "content";
-`
 
-export const Content = styled.div`
-  width: 114rem;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
+  > div {
+    width: 75%;
+   
+    margin: 0 auto;
 
-  > header {
+    header {
     width: 100%;
-    height: 5rem;
+    height: 1rem;
+    margin-bottom: 6.8rem;
     display: flex;
-    margin-block: 4.8rem;
+    margin-top: 4.8rem;
     justify-content: space-between;
 
      button { 
     width: 20.7rem;
   }
  }
+  }
+`
 
+export const Content = styled.div`
+  width: 75%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  
+  scrollbar-width: thin;
+  scrollbar-color: #888888;
 `
