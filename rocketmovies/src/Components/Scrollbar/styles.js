@@ -1,16 +1,23 @@
 import styled from 'styled-components'
-import { Scrollbars } from 'react-custom-scrollbars'
 
-export const StyledScrollbars = styled(Scrollbars)`
-  height: 100%;
+
+export const StyledScrollbars = styled.div`
   width: 100%;
+  height: 100%;
+  overflow: auto;
+  scrollbar-width: thin;
 
-  .track-vertical {
-    background-color: #f0f0f0;
+  &::-webkit-scrollbar {
+    width: .8rem;
   }
 
-  .thumb-vertical {
-    background-color: #888888;
-    border-radius: 5px;
+  &::-webkit-scrollbar-thumb {
+    background-color: ${({theme }) => theme.COLORS.ROSE};
+    border-radius: .5rem;
+    height: 1rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: none;    
   }
 `;
