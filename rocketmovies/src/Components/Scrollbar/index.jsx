@@ -1,7 +1,7 @@
-import { ScrollCustom } from './styles'
+import {StyledScrollbars} from './styles'
 
 export function Scrollbar({ children }){
   return(
-    <ScrollCustom>{children}</ScrollCustom>
+    <StyledScrollbars>{children}</StyledScrollbars>
   )
 }
