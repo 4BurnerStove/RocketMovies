@@ -7,7 +7,7 @@ export function Header() {
     <Container>
       <h1>RocketMovies</h1>
 
-      <Input placeholder='Pesquisar pelo título'></Input>
+      <Input  placeholder='Pesquisar pelo título'></Input>
 
       <Profile>
         <div>
