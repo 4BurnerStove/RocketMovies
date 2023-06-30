@@ -47,7 +47,6 @@ export function Home() {
           ></Note>
           <Note
             rating={3}
-
             data={{
               title: 'O Poderoso chefão',
               tags: [
