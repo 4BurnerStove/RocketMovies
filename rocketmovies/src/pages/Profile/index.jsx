@@ -5,14 +5,17 @@ import { Input } from '../../Components/Input'
 import { TfiArrowLeft } from 'react-icons/tfi'
 import { FiLock, FiMail, FiUser, FiCamera} from 'react-icons/fi'
 
+import { Link } from 'react-router-dom'
+
 import { Container, Form, Avatar } from './styles'
 
 export function Profile() {
   return (
     <Container>
       <header>
+        <Link to='/'>
         <ButtonText icon={TfiArrowLeft} name='Voltar'></ButtonText>
-        
+        </Link>
       </header>
 
       <Form>

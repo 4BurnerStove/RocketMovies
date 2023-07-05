@@ -45,7 +45,7 @@ export const Profile = styled.div`
  }
 
 
- > img { 
+  img { 
   width: 6.4rem;
   height: 6.4rem;
 

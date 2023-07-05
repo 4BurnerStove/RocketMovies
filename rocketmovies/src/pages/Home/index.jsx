@@ -16,8 +16,10 @@ export function Home() {
         <div>
           <header>
             <h1>Meus filmes</h1>
+            <Link to='/createmovie'>
             <Button icon={FiPlus} name='Adicionar Filme'>
             </Button>
+            </Link>
           </header>
         </div>
         

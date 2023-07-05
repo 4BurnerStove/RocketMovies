@@ -9,6 +9,7 @@ import { MovieItem } from '../../Components/MovieItem'
 
 import { Container, Form, Tag } from './styles'
 import { TfiArrowLeft } from 'react-icons/tfi'
+import { Link } from 'react-router-dom'
 
 export function CreateMovie() {
   return (
@@ -17,7 +18,9 @@ export function CreateMovie() {
 
       <main>
         <header>
+          <Link to='/'>
           <ButtonText name='Voltar' icon={TfiArrowLeft}></ButtonText>
+          </Link>
           <h1>Novo filme</h1>
         </header>
 
