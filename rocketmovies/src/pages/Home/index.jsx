@@ -6,6 +6,7 @@ import { Note } from '../../Components/Note'
 
 import { FiPlus } from 'react-icons/fi'
 import { Scrollbar } from '../../Components/Scrollbar'
+import { Link } from 'react-router-dom'
 
 export function Home() {
   return (
