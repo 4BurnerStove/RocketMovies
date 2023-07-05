@@ -13,7 +13,7 @@ export const Container = styled.div`
     width: 75%;
     margin: 0 auto;
 
-    header {
+    header { 
     width: 100%;
     margin-bottom: 6.8rem;
     display: flex;

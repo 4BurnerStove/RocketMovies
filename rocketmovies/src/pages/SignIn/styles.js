@@ -21,13 +21,17 @@ export const Form = styled.form`
     text-align: left;
   }
 
+  a {
+    display: flex;
+    justify-content: center;
+  }
+
   > h1 {
     font-size: 4.8rem;
     color: ${({theme }) => theme.COLORS.ROSE}
   }
 
   > p {
-   text-align: left;
    color: ${({theme }) => theme.COLORS.GRAY_100}
  }
   > h2 {

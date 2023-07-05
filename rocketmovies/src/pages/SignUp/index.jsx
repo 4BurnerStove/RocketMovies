@@ -3,6 +3,7 @@ import { Button } from '../../Components/Button'
 import { ButtonText } from '../../Components/ButtonText'
 import { FiMail, FiLock, FiUser } from 'react-icons/fi'
 import { TfiArrowLeft } from 'react-icons/tfi'
+import { Link } from 'react-router-dom'
 
 import { Container, Form, Background } from './styles'
 
@@ -19,7 +20,9 @@ export function SignUp() {
         <Input type='text' placeholder='E-mail' icon={FiMail}></Input>
         <Input type='password'placeholder='Senha'icon={FiLock}></Input>
         <Button name='Cadastrar'></Button>
-        <ButtonText icon={TfiArrowLeft} name='Voltar para o login'></ButtonText>
+        <Link to='/'>
+        <ButtonText icon={TfiArrowLeft} name='Voltar para o login'/>
+        </Link>
 
       </Form>
       <Background></Background>
