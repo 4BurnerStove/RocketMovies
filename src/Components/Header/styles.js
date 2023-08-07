@@ -30,6 +30,10 @@ export const Profile = styled.div`
  
  gap: .9rem;
 
+ a:visited {
+  color: ${({ theme }) => theme.COLORS.ROSE};
+ }
+
  > div {
     display: flex;
     flex-direction: column;

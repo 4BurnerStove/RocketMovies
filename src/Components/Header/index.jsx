@@ -8,16 +8,17 @@ export function Header() {
     <Container>
       <h1>RocketMovies</h1>
 
-      <Input  placeholder='Pesquisar pelo título'></Input>
+      <Input placeholder='Pesquisar pelo título'></Input>
 
       <Profile>
         <div>
-        <h2>Andre Morryson</h2>
-        <span>sair</span>
-
+          <Link to='/Profile'>
+            <h2>Andre Morryson</h2>
+          </Link>
+          <span>sair</span>
         </div>
         <Link to='/Profile'>
-         <img src="https://github.com/4Burnerstove.png" alt="" />
+          <img src="https://github.com/4Burnerstove.png" alt="" />
         </Link>
       </Profile>
     </Container>
