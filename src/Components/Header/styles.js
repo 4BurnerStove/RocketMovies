@@ -31,7 +31,7 @@ export const Profile = styled.div`
  gap: .9rem;
 
  a:visited {
-  color: ${({ theme }) => theme.COLORS.ROSE};
+  color: ${({ theme }) => theme.COLORS.WHITE};
  }
 
  > div {

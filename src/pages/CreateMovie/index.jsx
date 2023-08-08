@@ -26,11 +26,13 @@ export function CreateMovie() {
 
       <Scrollbar>
         <Form>
+
           <div>
           <Input type='text' placeholder='Título'></Input>
           <Input type='number' placeholder='Sua nota(de 0 a 5)'></Input>
           </div>
           <Textarea placeholder='Detalhes'></Textarea>
+
           <section>
             <h2>Marcadores</h2>
             <Tag>
@@ -39,10 +41,12 @@ export function CreateMovie() {
               <MovieItem placeholder='Novo marcador' isNew></MovieItem>
             </Tag>
           </section>
+
           <div>
             <Button name='Excluir filme'></Button>
             <Button name='Salvar alterações'></Button>
-          </div>    
+          </div>
+
         </Form>
       </Scrollbar>
       </main>
