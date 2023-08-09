@@ -26,7 +26,6 @@ export function CreateMovie() {
 
       <Scrollbar>
         <Form>
-
           <div>
           <Input type='text' placeholder='Título'></Input>
           <Input type='number' placeholder='Sua nota(de 0 a 5)'></Input>

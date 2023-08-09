@@ -50,7 +50,7 @@ export const ContainerStar = styled.div`
 
   > svg {
     stroke: ${({ theme }) => theme.COLORS.ROSE };;
-  
+
   }
 `
 

@@ -1,6 +1,6 @@
 import { Container, ContainerStar, Updated, RatingStar, Etags, User, UpdatedAt, HeaderMovie } from './styles'
 
-import {AiOutlineClockCircle} from 'react-icons/ai'
+import { AiOutlineClockCircle } from 'react-icons/ai'
 
 
 export function Secnote({ data, userName, rating, ...rest }) {
@@ -24,7 +24,7 @@ export function Secnote({ data, userName, rating, ...rest }) {
           <p>por {userName}</p>
         </User>
         <UpdatedAt>
-          <AiOutlineClockCircle/>
+          <AiOutlineClockCircle />
           23/05/22 as 08:00
         </UpdatedAt>
       </Updated>
