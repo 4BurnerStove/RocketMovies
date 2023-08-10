@@ -19,35 +19,35 @@ export function CreateMovie() {
       <main>
         <header>
           <Link to='/'>
-          <ButtonText name='Voltar' icon={TfiArrowLeft}></ButtonText>
+            <ButtonText name='Voltar' icon={TfiArrowLeft}></ButtonText>
           </Link>
           <h1>Novo filme</h1>
         </header>
 
-      <Scrollbar>
-        <Form>
-          <div>
-          <Input type='text' placeholder='Título'></Input>
-          <Input type='number' placeholder='Sua nota(de 0 a 5)'></Input>
-          </div>
-          <Textarea placeholder='Detalhes'></Textarea>
+        <Scrollbar>
+          <Form>
+            <div>
+              <Input type='text' placeholder='Título'></Input>
+              <Input type='number' placeholder='Sua nota(de 0 a 5)'></Input>
+            </div>
+            <Textarea placeholder='Detalhes'></Textarea>
 
-          <section>
-            <h2>Marcadores</h2>
-            <Tag>
-              <MovieItem value='Aventura'></MovieItem>
-              <MovieItem value='Ação'></MovieItem>
-              <MovieItem placeholder='Novo marcador' isNew></MovieItem>
-            </Tag>
-          </section>
+            <section>
+              <h2>Marcadores</h2>
+              <Tag>
+                <MovieItem value='Aventura'></MovieItem>
+                <MovieItem value='Ação'></MovieItem>
+                <MovieItem placeholder='Novo marcador' isNew></MovieItem>
+              </Tag>
+            </section>
 
-          <div>
-            <Button name='Excluir filme'></Button>
-            <Button name='Salvar alterações'></Button>
-          </div>
+            <div>
+              <Button name='Excluir filme'></Button>
+              <Button name='Salvar alterações'></Button>
+            </div>
 
-        </Form>
-      </Scrollbar>
+          </Form>
+        </Scrollbar>
       </main>
     </Container>
 

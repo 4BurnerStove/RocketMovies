@@ -3,7 +3,7 @@ import { Container, ContainerStar, Updated, RatingStar, Etags, User, UpdatedAt, 
 import { AiOutlineClockCircle } from 'react-icons/ai'
 
 
-export function Secnote({ data, userName, rating, ...rest }) {
+export function Secnote({ data, userName, ...rest }) {
   const stars = Array.from({ length: 5 }, (_, index) => index + 1);
 
   return (
@@ -13,7 +13,7 @@ export function Secnote({ data, userName, rating, ...rest }) {
 
         <ContainerStar>
           {stars.map((star) => (
-            <RatingStar key={star} active={star <= rating}></RatingStar>
+            <RatingStar key={star} active={star <= data.grade}></RatingStar>
           ))}
         </ContainerStar>
       </HeaderMovie>
