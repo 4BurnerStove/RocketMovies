@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { useAuth } from '../../hooks/auth'
+import { api } from '../../services/api'
 
 import { Input } from '../../Components/Input'
 import { Button } from '../../Components/Button'
@@ -17,15 +17,24 @@ export function SignUp() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const navigate = useNavigate()
-  const { signUp } = useAuth()
 
   function handleSignUp() {
-    signUp({ name, email, password }, (navi) => {
-      if (navi) {
-        return
-      }
-      navigate('/')
-    })
+    if (!name || !email || !password) {
+      return alert('Por favor  preencha todos os campos')
+    }
+
+    api.post('/users', { name, email, password })
+      .then(() => {
+        alert('Usuário cadastrado com sucesso!')
+        navigate('/')
+      })
+      .catch((error) => {
+        if (error.response) {
+          alert(error.response.data.message)
+        } else {
+          alert('Não foi possivel fazer o cadastro')
+        }
+      })
   }
 
 
