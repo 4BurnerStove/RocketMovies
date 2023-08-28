@@ -31,7 +31,7 @@ export function Home() {
             <Note
               data={{
                 title: 'Interestelar',
-                description: 'SEXO SEXO SEXO SEXO SEXO SEXO',
+                description: 'mucho texto',
                 grade: '4',
                 tags: [
                   { id: '1', name: 'Drama' },
