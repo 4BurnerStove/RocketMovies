@@ -35,8 +35,6 @@ export const Profile = styled.div`
  }
 
  > div {
-    display: flex;
-    flex-direction: column;
     text-align: right;
 
     h2 {
@@ -44,7 +42,9 @@ export const Profile = styled.div`
     }
 
     span {
-      color: ${({ theme }) => theme.COLORS.GRAY_100}
+      color: ${({ theme }) => theme.COLORS.GRAY_100};
+      cursor: pointer;
+      
     }
  }
 
