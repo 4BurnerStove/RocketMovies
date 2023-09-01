@@ -38,8 +38,6 @@ function AuthProvider({ children }) {
 
   async function updateProfile({ user }) {
     try {
-
-
       await api.put('/users', user)
       localStorage.setItem('@rocketmovies:user', JSON.stringify(user))
 

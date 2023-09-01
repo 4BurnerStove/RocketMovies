@@ -18,7 +18,18 @@ export function Profile() {
   const [email, setEmail] = useState(user.email)
   const [oldPassword, setOldPassword] = useState('')
   const [newPassword, setNewPassword] = useState('')
-  
+
+  const [avatar, setAvatar] = useState(user.avatar)
+  const [avatarFile, setAvatarFile] = useState(null)
+
+  function handleChangeAvatar(event) {
+    const file = event.target.files[0]
+    setAvatarFile(file)
+
+    const imagePreview = URL.createObjectURL(file)
+    setAvatar(imagePreview)
+  }
+
   async function handleUpdate() {
     const user = {
       name,
@@ -40,10 +51,14 @@ export function Profile() {
 
       <Form>
         <Avatar>
-          <img src="https://github.com/4Burnerstove.png" alt="Foto do usuário" />
+          <img src={avatar} alt="Foto do usuário" />
           <label htmlFor="avatar">
             <FiCamera />
-            <input type="file" id='avatar' />
+            <input
+              type="file"
+              id='avatar'
+              onChange={handleChangeAvatar}
+            />
           </label>
         </Avatar>
 
