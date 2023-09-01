@@ -6,6 +6,9 @@ import { useAuth } from '../../hooks/auth'
 import { useState } from 'react'
 import { TfiArrowLeft } from 'react-icons/tfi'
 import { FiLock, FiMail, FiUser, FiCamera } from 'react-icons/fi'
+import { api } from '../../services/api'
+
+import avatarPlaceholder from '../../Assets/avatar_placeholder.svg'
 
 import { Link } from 'react-router-dom'
 
@@ -19,7 +22,8 @@ export function Profile() {
   const [oldPassword, setOldPassword] = useState('')
   const [newPassword, setNewPassword] = useState('')
 
-  const [avatar, setAvatar] = useState(user.avatar)
+  const avatarUrl = user.avatar ? `${api.defaults.baseURL}/files/${user.avatar}` : avatarPlaceholder
+  const [avatar, setAvatar] = useState(avatarUrl)
   const [avatarFile, setAvatarFile] = useState(null)
 
   async function handleUpdate() {

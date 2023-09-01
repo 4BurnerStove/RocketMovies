@@ -1,6 +1,9 @@
 import { createGlobalStyle } from "styled-components";
+import styled from 'styled-components'
+import Avatar from "../Assets/avatar_placeholder.svg";
 
 export default createGlobalStyle`
+
   * {
     margin: 0;
     padding: 0;
