@@ -43,13 +43,7 @@ export const Form = styled.div`
     }
   }
 
-  button:nth-child(1){
-      background-color: ${({theme }) => theme.COLORS.
-      BACKGROUND_100};
-    color: ${({theme }) => theme.COLORS.ROSE};
-   }
-
-  > button:nth-child(2){
+  > button:nth-child(1){
     background-color: ${({theme }) => theme.COLORS.ROSE}
    }
 
