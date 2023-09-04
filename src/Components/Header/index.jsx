@@ -3,10 +3,17 @@ import { Input } from '../Input'
 import { Modal } from '../Modal'
 import { Link } from 'react-router-dom'
 
+import { useAuth } from '../../hooks/auth'
+import avatarPlaceholder from '../../Assets/avatar_placeholder.svg'
+import { api } from '../../services/api'
+
 import { useState } from 'react'
 
 export function Header() {
   const [openModal, setOpenModal] = useState(false)
+  const { user } = useAuth()
+
+  const avatarUrl = user.avatar ? `${api.defaults.baseURL}/files/${user.avatar}` : avatarPlaceholder
 
   return (
     <Container>
@@ -21,7 +28,7 @@ export function Header() {
       <Profile>
         <div>
           <Link to='/Profile'>
-            <h2>Andre Morryson</h2>
+            <h2>{user.name}</h2>
           </Link>
 
           <Modal content={'Deseja realmente sair?'} next={'Sim'} close={'Não'} isOpen={openModal} closeModal={() => setOpenModal(!openModal)} />
@@ -30,7 +37,7 @@ export function Header() {
         </div>
 
         <Link to='/Profile'>
-          <img src="https://imgs.search.brave.com/leHCv-HR42-K9GZqeA3kPjMQ6CUIrRvkxJt8R-lwlmg/rs:fit:860:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzAwLzY1Lzc3LzI3/LzM2MF9GXzY1Nzcy/NzE5X0ExVVY1a0xp/NW5DRVdJMEJOTExp/RmFCUEVrVWJ2NUZ2/LmpwZw" alt="" />
+          <img src={avatarUrl} alt="" />
         </Link>
       </Profile>
     </Container >
