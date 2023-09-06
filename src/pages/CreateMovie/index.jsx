@@ -21,9 +21,11 @@ export function CreateMovie() {
   const [moviesTags, setmoviesTags] = useState([])
   const [newTags, setNewTags] = useState('')
 
+
+
   function handleAddTag() {
     if (!newTags) {
-      return alert('Adicione uma tag antes de prosseguir')
+      return alert('Adicione ao menos uma tag antes de prosseguir')
     }
     setmoviesTags(prevState => [...prevState, newTags])
     setNewTags('')
@@ -34,6 +36,19 @@ export function CreateMovie() {
   }
 
   async function handleNewMovie() {
+    if (!titleMovie) {
+      return alert('É preciso dar um titulo ao filme.')
+    }
+
+    if (!grade) {
+      return alert('Você esqueceu de avaliar o filme.')
+    }
+
+
+    if (newTags) {
+      return alert('Você esqueceu uma tag no campo de marcadores, mas não a adicionou, adicione por favor.')
+    }
+
     try {
       await api.post('/movieNotes', {
         titleMovie,
