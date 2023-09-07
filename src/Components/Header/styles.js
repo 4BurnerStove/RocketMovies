@@ -14,9 +14,8 @@ export const Container = styled.header`
   border-bottom: .2rem solid ${({ theme }) => theme.COLORS.GRAY_200};;
 
   background-color: ${({ theme }) => theme.COLORS.BACKGROUND_200};
-
-  > h1 {
-    color: ${({ theme }) => theme.COLORS.ROSE};
+  > a:visited {
+    color: ${({ theme }) => theme.COLORS.ROSE}
   }
 
   grid-area: header;

@@ -11,12 +11,14 @@ import { useState } from 'react'
 
 import { Container, Form, Tag } from './styles'
 import { TfiArrowLeft } from 'react-icons/tfi'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 export function CreateMovie() {
   const [titleMovie, setTitleMovie] = useState('')
   const [description, setDescription] = useState('')
   const [grade, setGrade] = useState(Number)
+
+  const Navigate = useNavigate()
 
   const [moviesTags, setmoviesTags] = useState([])
   const [newTags, setNewTags] = useState('')
@@ -47,17 +49,14 @@ export function CreateMovie() {
       return alert('Você esqueceu uma tag no campo de marcadores, mas não a adicionou, adicione por favor.')
     }
 
-    try {
-      await api.post('/movieNotes', {
-        titleMovie,
-        grade,
-        description,
-        moviesTags
-      });
-      alert('Filme adicionado com sucesso!');
-    } catch (error) {
-      console.error(error);
-    }
+    await api.post('/movieNotes', {
+      titleMovie,
+      grade,
+      description,
+      moviesTags
+    });
+    alert('Filme adicionado com sucesso!');
+    Navigate('/')
   }
 
 
