@@ -7,11 +7,20 @@ import { useAuth } from '../../hooks/auth'
 import avatarPlaceholder from '../../Assets/avatar_placeholder.svg'
 import { api } from '../../services/api'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 export function Header() {
   const [openModal, setOpenModal] = useState(false)
+  const [search, setSearch] = useState('')
+  const [notes, setNotes] = useState([])
   const { user } = useAuth()
+
+  useEffect(() => {
+    async function fetchNotes() {
+      const response = await api.get(`/notes?title=${search}`)
+      setNotes(response.data)
+    }
+  }, [search])
 
   const avatarUrl = user.avatar ? `${api.defaults.baseURL}/files/${user.avatar}` : avatarPlaceholder
 
@@ -21,8 +30,8 @@ export function Header() {
 
       <Input
         placeholder='Pesquisar pelo título'
-
         onChange={(e) => setSearch(e.target.value)}
+
       ></Input>
 
       <Profile>

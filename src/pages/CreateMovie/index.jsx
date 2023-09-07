@@ -21,8 +21,6 @@ export function CreateMovie() {
   const [moviesTags, setmoviesTags] = useState([])
   const [newTags, setNewTags] = useState('')
 
-
-
   function handleAddTag() {
     if (!newTags) {
       return alert('Adicione ao menos uma tag antes de prosseguir')
