@@ -10,8 +10,6 @@ import { Link } from 'react-router-dom'
 
 export function Home() {
 
-
-
   return (
     <Container>
       <Header></Header>
