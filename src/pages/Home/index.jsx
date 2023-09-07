@@ -40,12 +40,18 @@ export function Home() {
         <Scrollbar>
           <List >
             {
-              notes.map(note => (
-                <Note
-                  key={String(note.id)}
-                  data={note}
-                >
-                </Note>
+              notes.length === 0 ? (
+                <p>Não há filmes cadastrados por enquanto.</p>
+              ) : (
+
+                notes.map(note => (
+                  <Note
+                    key={String(note.id)}
+                    data={note}
+                  >
+                  </Note>
+                )
+
               ))
             }
           </List>

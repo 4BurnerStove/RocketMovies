@@ -8,7 +8,7 @@ export function Note({ data, ...rest }) {
   return (
     <Container {...rest}>
       <div>
-        <h1>{data.title}</h1>
+        <h1>{data.titleMovie}</h1>
 
         <ContainerStar>
           {stars.map((star) => (

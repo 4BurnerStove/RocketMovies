@@ -27,6 +27,7 @@ p {
   flex-direction: column;
 
    h1 {
+    padding-bottom: .8rem;
     flex: 1;
     text-align: left;
     font-weight: 700;
