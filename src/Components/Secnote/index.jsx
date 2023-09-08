@@ -1,15 +1,23 @@
 import { Container, ContainerStar, Updated, RatingStar, Etags, User, UpdatedAt, HeaderMovie } from './styles'
 
 import { AiOutlineClockCircle } from 'react-icons/ai'
+import { useAuth } from '../../hooks/auth';
+import { api } from '../../services/api'
 
+import avatarPlaceholder from '../../Assets/avatar_placeholder.svg'
 
-export function Secnote({ data, userName, ...rest }) {
+export function Secnote({ data, ...rest }) {
   const stars = Array.from({ length: 5 }, (_, index) => index + 1);
+
+  const { user } = useAuth()
+
+
+  const avatarUrl = user.avatar ? `${api.defaults.baseURL}/files/${user.avatar}` : avatarPlaceholder
 
   return (
     <Container {...rest}>
       <HeaderMovie>
-        <h1>{data.title}</h1>
+        <h1>{data.titleMovie}</h1>
 
         <ContainerStar>
           {stars.map((star) => (
@@ -20,15 +28,14 @@ export function Secnote({ data, userName, ...rest }) {
 
       <Updated>
         <User>
-          <img src="https://github.com/4Burnerstove.png" alt="Foto do usuário" />
-          <p>por {userName}</p>
+          <img src={avatarUrl} alt="Foto do usuário" />
+          <p>por {user.name}</p>
         </User>
         <UpdatedAt>
           <AiOutlineClockCircle />
-          23/05/22 as 08:00
+          {}
         </UpdatedAt>
       </Updated>
-
 
       {
         data.tags &&

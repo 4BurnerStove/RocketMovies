@@ -3,17 +3,15 @@ import { FiStar } from 'react-icons/fi'
 
 import { Tag } from '../Tags'
 
-export const Container = styled.button`
+export const Container = styled.div`
 width: 100%;
 background-color: transparent;
-cursor: unset;
-
 
 border: none;
 border-radius: 1rem;
 
 padding-block: 3.2rem;
-margin-bottom: 1.6rem;
+margin-bottom: .2rem;
 
 > footer {
   width: 100%;
@@ -40,16 +38,19 @@ export const Etags = styled(Tag)`
 export const RatingStar = styled(FiStar)`
   width: 2rem;
   height: 2rem;
+  margin-bottom: 1.2rem;
   fill: ${({ theme, active }) => (active ? theme.COLORS.ROSE : 'none')};
 `
 
 export const HeaderMovie = styled.div`
-  display: flex;
+  display: inline-block;
+  
   align-items: center;
 
   gap: 2rem;
 
    h1 {
+    width: 100%;
     text-align: left;
     font-weight: 700;
     font-size: 3.6rem;

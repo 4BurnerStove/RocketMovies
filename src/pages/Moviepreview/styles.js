@@ -5,7 +5,7 @@ export const Container = styled.div`
 `
 
 export const Content = styled.div`
-  width: 75%;
+  width: 65%;
   margin: 0 auto;
   margin-top: 4rem;
 `
@@ -17,9 +17,7 @@ export const TextContent = styled.div`
   gap: 1.4rem;
 
   > p { 
-    text-align: justify;
+    text-align: center;
     font-size: 1.6rem;
-    
   }
-
 `

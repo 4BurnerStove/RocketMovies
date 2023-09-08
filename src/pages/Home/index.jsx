@@ -19,14 +19,13 @@ export function Home() {
     async function fetchNotes() {
       const response = await api.get('/movieNotes')
       setNotes(response.data)
-      console.log(response.data)
     }
 
     fetchNotes()
   }, [])
 
   function handleDetails(id) {
-    navigate(`/moviepreview:${id}`)
+    navigate(`/moviepreview/${id}`)
   }
 
   return (
@@ -49,7 +48,6 @@ export function Home() {
               notes.length === 0 ? (
                 <p>Não há filmes cadastrados por enquanto.</p>
               ) : (
-
                 notes.map(note => (
                   <Note
                     key={String(note.id)}
@@ -58,7 +56,6 @@ export function Home() {
                   >
                   </Note>
                 )
-
                 ))
             }
           </List>
