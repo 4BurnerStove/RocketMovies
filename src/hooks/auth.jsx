@@ -1,5 +1,7 @@
 import { createContext, useContext, useState, useEffect } from 'react'
 
+import { useNavigate } from 'react-router-dom'
+
 import { api } from '../services/api'
 
 export const AuthContext = createContext({})
@@ -30,10 +32,12 @@ function AuthProvider({ children }) {
   }
 
   function signOut() {
+    const navigate = useNavigate()
     localStorage.removeItem("@rocketmovies:token")
     localStorage.removeItem("@rocketmovies:user")
 
     setData({})
+    navigate('/')
   }
 
   async function updateProfile({ user, avatarFile }) {

@@ -1,10 +1,12 @@
-import React from 'react'
 import { useAuth } from '../../hooks/auth'
 import { Container, Confirm, Content, ModalPart } from './styles'
+
+
 
 export function Modal({ isOpen, closeModal, content, next, close }) {
 
   const { signOut } = useAuth()
+
 
   if (isOpen) {
     return (

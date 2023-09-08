@@ -6,12 +6,14 @@ import { Note } from '../../Components/Note'
 
 import { FiPlus } from 'react-icons/fi'
 import { Scrollbar } from '../../Components/Scrollbar'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import { api } from '../../services/api'
 
 export function Home() {
   const [notes, setNotes] = useState([])
+
+  const navigate = useNavigate()
 
   useEffect(() => {
     async function fetchNotes() {
@@ -22,6 +24,10 @@ export function Home() {
 
     fetchNotes()
   }, [])
+
+  function handleDetails(id) {
+    navigate(`/moviepreview:${id}`)
+  }
 
   return (
     <Container>
@@ -48,11 +54,12 @@ export function Home() {
                   <Note
                     key={String(note.id)}
                     data={note}
+                    onClick={() => handleDetails(note.id)}
                   >
                   </Note>
                 )
 
-              ))
+                ))
             }
           </List>
         </Scrollbar>
