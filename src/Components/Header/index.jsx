@@ -1,7 +1,7 @@
 import { Container, Profile } from './styles'
 import { Input } from '../Input'
 import { Modal } from '../Modal'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 import { useAuth } from '../../hooks/auth'
 import avatarPlaceholder from '../../Assets/avatar_placeholder.svg'
@@ -14,6 +14,14 @@ export function Header() {
   const [search, setSearch] = useState('')
   const [notes, setNotes] = useState([])
   const { user } = useAuth()
+
+  const { signOut } = useAuth()
+  const navigate = useNavigate()
+
+  function handleSignOut() {
+    signOut()
+    navigate('/')
+  }
 
   useEffect(() => {
     async function fetchNotes() {
@@ -42,7 +50,14 @@ export function Header() {
             <h2>{user.name}</h2>
           </Link>
 
-          <Modal content={'Deseja realmente sair?'} next={'Sim'} close={'Não'} isOpen={openModal} closeModal={() => setOpenModal(!openModal)} />
+          <Modal
+            content={'Deseja realmente sair?'}
+            next={'Sim'}
+            close={'Não'}
+            isOpen={openModal}
+            closeModal={() => setOpenModal(!openModal)}
+            modalFunction={() => handleSignOut()}
+          />
 
           <span onClick={() => setOpenModal(true)}>sair</span>
         </div>
