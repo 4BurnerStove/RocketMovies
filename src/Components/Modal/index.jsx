@@ -1,11 +1,18 @@
 import { useAuth } from '../../hooks/auth'
 import { Container, Confirm, Content, ModalPart } from './styles'
+import { useNavigate } from 'react-router-dom'
 
 
 
 export function Modal({ isOpen, closeModal, content, next, close }) {
 
   const { signOut } = useAuth()
+  const navigate = useNavigate()
+
+  function handleSignOut(){
+    signOut()
+    navigate('/')
+  }
 
 
   if (isOpen) {
@@ -15,7 +22,7 @@ export function Modal({ isOpen, closeModal, content, next, close }) {
           <ModalPart>
             {content}
             <div>
-              <Confirm onClick={signOut}>{next}</Confirm>
+              <Confirm onClick={handleSignOut}>{next}</Confirm>
               <Confirm onClick={closeModal}>{close}</Confirm>
             </div>
           </ModalPart>

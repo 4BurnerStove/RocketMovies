@@ -17,9 +17,6 @@ export function Moviepreview() {
   const [details, setDetails] = useState([])
   const params = useParams()
 
-
-
-
   useEffect(() => {
     async function fetchMovie() {
       const response = await api.get(`/movieNotes/${params.id}`)
