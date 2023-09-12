@@ -6,6 +6,7 @@ export const Container = styled.button`
 width: 100%;
 background-color: ${({theme }) => theme.COLORS.ROSE_BACKGROUND};
 
+
 border: none;
 border-radius: 1rem;
 
@@ -19,12 +20,17 @@ p {
   font-size: 1.6rem;
   font-weight: 300;
   text-align: left;
+
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis;
 }
 
 
 > div {
   display: flex;
   flex-direction: column;
+
 
    h1 {
     padding-bottom: .8rem;
