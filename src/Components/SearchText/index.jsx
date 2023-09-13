@@ -12,6 +12,9 @@ export function SearchText({ content, id }) {
 
   function handleDetails() {
     navigate(`/moviepreview/${id}`)
+    setTimeout(() => {
+      window.location.reload();
+    }, 5)
   }
 
   return (

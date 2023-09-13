@@ -8,16 +8,34 @@ import { useAuth } from '../../hooks/auth'
 import { api } from '../../services/api'
 import avatarPlaceholder from '../../Assets/avatar_placeholder.svg'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 
 export function Header() {
   const [openModal, setOpenModal] = useState(false)
   const [search, setSearch] = useState('')
   const [notes, setNotes] = useState([])
   const { user } = useAuth()
+  const searchRef = useRef(null)
 
   const { signOut } = useAuth()
   const navigate = useNavigate()
+
+  const handleClickOutside = (e) => {
+    if (searchRef.current && !searchRef.current.contains(e.target)) {
+      setSearch('');
+      setNotes([]);
+    }
+  }
+
+  useEffect(() => {
+    // Adiciona um ouvinte de evento de clique ao documento
+    document.addEventListener('click', handleClickOutside);
+
+    // Remove o ouvinte de evento quando o componente é desmontado
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, [])
 
   function handleSignOut() {
     signOut()
@@ -30,10 +48,10 @@ export function Header() {
       setNotes(response.data)
     }
 
+    // Garante com que a barra de pesquisa não fique exibindo informações sozinha
     search.trim() !== '' ? fetchNotes() : setNotes([])
   }, [search])
 
-  console.log(notes)
   const avatarUrl = user.avatar ? `${api.defaults.baseURL}/files/${user.avatar}` : avatarPlaceholder
 
   return (
@@ -42,14 +60,14 @@ export function Header() {
         <h1>RocketMovies</h1>
       </Link>
 
-      <div  className='input'>
+      <div className='input' ref={searchRef}>
         <Input
           placeholder='Pesquisar pelo título'
           onChange={(e) => setSearch(e.target.value)}
         ></Input>
 
         {
-          notes.length === 0 ? null : (
+          notes === '' ? null : (
             <ul>
               {
                 notes.map((note) => (

@@ -25,7 +25,14 @@ export const Container = styled.header`
     display: flex;
     flex-direction: column;
     
-  
+    ul:hover, li:hover {
+      background-color: ${({ theme }) => theme.COLORS.BACKGROUND_200}
+    }
+    
+    li, ul {
+        transition: background-color 400ms;
+     }
+
     ul {
       width: 100%;
       position: absolute;
