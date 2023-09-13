@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { Container } from "./styles";
 import { useNavigate } from "react-router-dom";
 
