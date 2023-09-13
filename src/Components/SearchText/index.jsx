@@ -6,10 +6,6 @@ export function SearchText({ content, id }) {
 
   const navigate = useNavigate()
 
-  useEffect(() => {
-
-  }, [])
-
   function handleDetails() {
     navigate(`/moviepreview/${id}`)
     setTimeout(() => {
@@ -18,8 +14,8 @@ export function SearchText({ content, id }) {
   }
 
   return (
-    <Container>
-      <p onClick={handleDetails} >{content}</p>
+    <Container onClick={handleDetails}>
+      <p  >{content}</p>
     </Container>
   )
 }
