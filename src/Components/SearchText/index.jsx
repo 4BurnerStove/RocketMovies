@@ -15,7 +15,7 @@ export function SearchText({ content, id }) {
 
   return (
     <Container onClick={handleDetails}>
-      <p  >{content}</p>
+      <p>{content}</p>
     </Container>
   )
 }
