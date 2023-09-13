@@ -14,8 +14,26 @@ export const Container = styled.header`
   border-bottom: .2rem solid ${({ theme }) => theme.COLORS.GRAY_200};;
 
   background-color: ${({ theme }) => theme.COLORS.BACKGROUND_200};
+  
   > a:visited {
     color: ${({ theme }) => theme.COLORS.ROSE}
+  }
+
+  .input {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+  
+    ul {
+      width: 100%;
+      position: absolute;
+      margin-top: 5.8rem;
+      border-radius: 2rem;
+      padding-inline: 1.2rem;
+      background-color: ${({ theme }) => theme.COLORS.BACKGROUND_300};
+    }
   }
 
   grid-area: header;

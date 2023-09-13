@@ -16,12 +16,12 @@ export function Home() {
   const navigate = useNavigate()
 
   useEffect(() => {
-    async function fetchNotes() {
-      const response = await api.get('/movieNotes')
+    async function showNotes() {
+      const response = await api.get(`/movieNotes`)
       setNotes(response.data)
     }
 
-    fetchNotes()
+    showNotes()
   }, [])
 
   function handleDetails(id) {
