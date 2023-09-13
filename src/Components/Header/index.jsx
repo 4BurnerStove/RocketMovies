@@ -41,7 +41,6 @@ export function Header() {
       <Input
         placeholder='Pesquisar pelo título'
         onChange={(e) => setSearch(e.target.value)}
-
       ></Input>
 
       <Profile>
