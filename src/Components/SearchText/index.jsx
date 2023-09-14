@@ -12,7 +12,6 @@ export function SearchText({ content, id }) {
     }, 5)
   }
   
-
   return (
     <Container onClick={handleDetails}>
       <p>{content}</p>
