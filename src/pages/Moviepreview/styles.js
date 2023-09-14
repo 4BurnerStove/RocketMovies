@@ -31,7 +31,8 @@ export const Content = styled.div`
 export const TextContent = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  text-align: center;
+  align-items: flex-start;
   gap: 1.4rem;
 
   > p { 
