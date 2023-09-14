@@ -35,7 +35,6 @@ export const TextContent = styled.div`
   gap: 1.4rem;
 
   > p { 
-    text-align: center;
     font-size: 1.6rem;
   }
 `
