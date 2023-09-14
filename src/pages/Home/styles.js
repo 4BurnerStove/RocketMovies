@@ -41,10 +41,10 @@ export const List = styled.div`
 
   > p {
     width: 100%;
-    padding: 2.4rem;
+    padding: 2.6rem;
     border-radius: 1rem;
     box-shadow:  10px 10px 15px rgba(15, 4, 3, 0.2);
     background: ${({theme }) => theme.COLORS.ROSE_BACKGROUND};
-    font-size: 6.5rem;
+    font-size: 2.5rem;
   }
 `

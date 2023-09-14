@@ -19,6 +19,8 @@ export const Container = styled.header`
     color: ${({ theme }) => theme.COLORS.ROSE}
   }
 
+  
+
   .input {
     position: relative;
     width: 100%;
@@ -54,6 +56,14 @@ export const Profile = styled.div`
  
  gap: .9rem;
 
+ h2{
+  color: ${({ theme }) => theme.COLORS.WHITE}
+ }
+
+ h2:visited {
+  color: ${({ theme }) => theme.COLORS.WHITE}
+ }
+
  a:visited {
   color: ${({ theme }) => theme.COLORS.WHITE};
  }
@@ -68,7 +78,6 @@ export const Profile = styled.div`
     span {
       color: ${({ theme }) => theme.COLORS.GRAY_100};
       cursor: pointer;
-      
     }
  }
 
