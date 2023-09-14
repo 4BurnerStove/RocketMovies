@@ -31,12 +31,10 @@ export const Content = styled.div`
 export const TextContent = styled.div`
   display: flex;
   flex-direction: column;
-  text-align: center;
   align-items: flex-start;
   gap: 1.4rem;
 
   > p { 
-    
     text-align: center;
     font-size: 1.6rem;
   }
