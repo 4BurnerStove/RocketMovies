@@ -11,6 +11,7 @@ export function SearchText({ content, id }) {
       window.location.reload();
     }, 5)
   }
+  
 
   return (
     <Container onClick={handleDetails}>
