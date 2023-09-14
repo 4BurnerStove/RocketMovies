@@ -41,7 +41,7 @@ export const List = styled.div`
 
   > p {
     width: 100%;
-    padding: 3.5rem;
+    padding: 2.4rem;
     border-radius: 1rem;
     box-shadow:  10px 10px 15px rgba(15, 4, 3, 0.2);
     background: ${({theme }) => theme.COLORS.ROSE_BACKGROUND};
